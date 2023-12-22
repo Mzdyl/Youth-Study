@@ -1,0 +1,258 @@
+html {
+    /*width: 100%;*/
+    /*min-height: 100%;*/
+}
+
+body {
+    font-family: "PingFang SC", 'Helvetica Neue', "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif;
+    margin: 0;
+    /*min-height: 100%;*/
+    height: auto;
+}
+
+.report {
+    background-size: 100% auto;
+    padding: 1rem;
+    border: 5px solid #910300;
+    font-size: 16px;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    background: rgba(255, 255, 255, 1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+}
+
+.header img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header h4 {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    margin: 0;
+    color: #e2be5f;
+    font-size: 1.25rem;
+}
+
+.user-info {
+    text-align: center;
+    padding: 1rem 1rem 0;
+    position: relative;
+}
+
+.user-info h2, .user-info h4 {
+    font-weight: normal;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+}
+
+.user-info svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+}
+
+.report-table {
+    padding: 1rem;
+}
+
+.report-table.empty {
+    flex: 1;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #999999;
+}
+
+.report-table.empty .no-content img {
+    max-width: 5rem;
+}
+
+.report-table.empty .no-subscribe img {
+    max-width: 50%;
+    height: auto;
+}
+
+.report-table.empty .no-subscribe p {
+    margin: auto;
+}
+
+.subscribe-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #910300;
+    color: #910300;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-size: 100%;
+    overflow: hidden;
+
+}
+
+table td, table th {
+    border-bottom: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    padding: 0.875rem;
+    font-weight: normal;
+    border-radius: 3px;
+}
+
+table th:first-child {
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+}
+
+table th:last-child {
+    border-top: 1px solid #d9d9d9;
+}
+
+table tbody tr td:first-child {
+    border-left: 1px solid #d9d9d9;
+}
+
+.text-gray {
+    color: #999999;
+}
+
+.text-red {
+    /*color: #910300;*/
+    color: #f67764;
+    text-decoration-line: underline
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.download {
+    margin-top: 0.5rem;
+}
+
+.download h4 {
+    color: #910300;
+    display: inline;
+    border-bottom: 1px solid #910300;
+}
+
+.download p {
+    margin: 0.5rem 0 0;
+    color: #999999;
+}
+
+footer {
+    text-align: center;
+    /*font-size: 0.875rem;*/
+    padding: 0.5rem 0 0.75rem;
+}
+
+
+/*弹框*/
+.dialog {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .75);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.dialog.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog .dialog-body {
+    width: 80%;
+    height: 70%;
+    top: 15%;
+    left: 10%;
+    position: fixed;
+}
+
+.dialog .dialog-body .dialog-close {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    position: absolute;
+    left: 50%;
+    top: -2.5rem;
+    transform: translateX(-50%);
+    background-size: 60%;
+}
+
+.dialog .dialog-body #report-image {
+    background: #FFFFFF;
+    height: 100%;
+    border-radius: 5px;
+    overflow-y: auto;
+    border: 5px solid #910300;
+    position: relative;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dialog .dialog-body #report-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    touch-action: initial;
+}
+
+
+.dialog .dialog-body #report-image .process {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #999999;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dialog .dialog-body .report-text {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem
+}
+
+
